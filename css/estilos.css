@@ -1,13 +1,11 @@
-/* Temas de Material Design 3  */
-@import url(./tokens.css);
-@import url(../lib/css/shape.css);
-@import url(../lib/css/motion.css);
-@import url(../lib/css/state.css);
-@import url(../lib/css/elevation.css);
-@import url(../lib/css/colors.module.css);
-@import url(../lib/css/typography.css);
-@import url(../lib/css/theme.light.css) (prefers-color-scheme: light);
-@import url(../lib/css/theme.dark.css) (prefers-color-scheme: dark);
+/* Selecciona el tema claro para Material Design 3. Puedes elegir
+ * light.css, light-mc.css o light-hc.css */
+@import url(light.css) screen and (prefers-color-scheme: light);
+/* Selecciona el tema oscuro para Material Design 3. Puedes elegir
+ * dark.css, dark-mc.css o dark-hc.css */
+@import url(dark.css) screen and (prefers-color-scheme: dark);
+/* Definiciones para Material Design 3  */
+@import url(../material-tokens/css/baseline.css);
 /* Fonts utilizados */
 @import url(../lib/css/roboto.css);
 @import url(../lib/css/material-symbols-outlined.css);
@@ -29,199 +27,140 @@
 @import url(../lib/css/md-navigation-bar.css);
 
 html {
-  --tabWidth: 3.75rem;
-  --anchoNav: 22.5rem;
+ /* Indica los temas del sistema operativo que son soportados. */
+ color-scheme: light dark;
+ --tabWidth: 3.75rem;
+ --anchoNav: 22.5rem;
 }
 
 main {
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+ max-width: 600px;
+ margin-left: auto;
+ margin-right: auto;
 }
 
 /* Quita un borde rojo que coloca Firefox. */
 :-moz-ui-invalid {
-  box-shadow: none;
+ box-shadow: none;
 }
 
 body {
-  margin: 0;
-  display: none;
-  font-family: var(--md-sys-typescale-body-large-font);
-  font-weight: var(--md-sys-typescale-body-large-weight);
-  font-size: var(--md-sys-typescale-body-large-size);
-  font-style: var(--md-sys-typescale-body-large-font-style);
-  letter-spacing: var(--md-sys-typescale-body-large-tracking);
-  line-height: var(--md-sys-typescale-body-large-line-height);
-  text-transform: var(--md-sys-typescale-body-large-text-transform);
-  text-decoration: var(--md-sys-typescale-body-large-text-decoration);
-  color: var(--md-sys-color-on-background);
-  background-color: var(--md-sys-color-background);
-}
-
-body.fouc {
-  display: block;
-  opacity: 0;
-  animation-name: fouc;
-  animation-fill-mode: forwards;
-  animation-duration: 1s;
-}
-
-html {
-  --Font: -apple-system, BlinkMacSystemFont, roboto, sans-serif;
-  font-size: 1rem;
-  --colIntIos: white;
-  --colIntIosOnBk: #2acc2a;
-  --colIntIosOnBkFc: #1bbb1b;
-  --colIntIosOffBk: #dbdbdb;
-  --colIntIosOffBkFc: #BDBDBD;
-  --md-sys-typescale-label-large-weight-prominent:
-    var(--md-ref-typeface-weight-bold);
-  --md-box_shadow_level4:
-    0 var(--md-sys-elevation-level4) var(--md-sys-elevation-level4) var(--md-sys-color-shadow);
-  --md-box_shadow_level3:
-    0 var(--md-sys-elevation-level3) var(--md-sys-elevation-level3) var(--md-sys-color-shadow);
-  --md-box_shadow_level2:
-    0 var(--md-sys-elevation-level2) var(--md-sys-elevation-level2) var(--md-sys-color-shadow);
-  --md-box_shadow_level1:
-    0 var(--md-sys-elevation-level1) var(--md-sys-elevation-level1) var(--md-sys-color-shadow);
-  --md-box_shadow_level0: none;
-  --iconSize: 1.5rem;
-  --avatarSize: 2.5rem;
-  --imageSize: 3.5rem;
-  --videoWidth: 7.125rem;
-  --videoHeight: 4rem;
-  --md-sys-state-focus-indicator-outer-offset: 0.125rem;
-  --md-sys-state-focus-indicator-thickness: 0.1875rem;
-  /* Pressed state layer opacity */
-  --state-pressed-transparency-percentage: 84%;
-  /* Focus state layer opacity */
-  --state-focus-transparency-percentage: 88%;
-  /* Hover state layer opacity */
-  --state-hover-transparency-percentage: 92%;
-  /* label - small */
-  --md-sys-typescale-label-small-font-family-name: var(--Font);
-  /* label - medium */
-  --md-sys-typescale-label-medium-font-family-name: var(--Font);
-  /* label - large */
-  --md-sys-typescale-label-large-font-family-name: var(--Font);
-  /* body - small */
-  --md-sys-typescale-body-small-font-family-name: var(--Font);
-  /* body - medium */
-  --md-sys-typescale-body-medium-font-family-name: var(--Font);
-  /* body - large */
-  --md-sys-typescale-body-large-font-family-name: var(--Font);
-  /* headline - small */
-  --md-sys-typescale-headline-small-font-family-name: var(--Font);
-  /* headline - medium */
-  --md-sys-typescale-headline-medium-font-family-name: var(--Font);
-  /* headline - large */
-  --md-sys-typescale-headline-large-font-family-name: var(--Font);
-  /* display - small */
-  --md-sys-typescale-display-small-font-family-name: var(--Font);
-  /* display - medium */
-  --md-sys-typescale-display-medium-font-family-name: var(--Font);
-  /* display - large */
-  --md-sys-typescale-display-large-font-family-name: var(--Font);
-  /* title - small */
-  --md-sys-typescale-title-small-font-family-name: var(--Font);
-  /* title - medium */
-  --md-sys-typescale-title-medium-font-family-name: var(--Font);
-  /* title - large */
-  --md-sys-typescale-title-large-font-family-name: var(--Font);
-}
-
-p {
-  margin: 1rem;
-}
-
-a {
-  color: var(--md-sys-color-on-background);
-}
-
-@media (prefers-color-scheme: light) {
-  html {
-    --md-riple-color: #00000020;
-    --md-sys-color-surface-container-low: var(--md-ref-palette-neutral95);
-    --md-sys-color-surface-container-highest: var(--md-ref-palette-neutral90);
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    --md-riple-color: #ffffff40;
-    --md-sys-color-surface-container-low: var(--md-ref-palette-neutral20);
-    --md-sys-color-surface-container-highest: var(--md-ref-palette-neutral30);
-  }
+ margin: 0;
+ font-family: var(--md-sys-typescale-body-large-font);
+ font-weight: var(--md-sys-typescale-body-large-weight);
+ font-size: var(--md-sys-typescale-body-large-size);
+ font-style: var(--md-sys-typescale-body-large-font-style);
+ letter-spacing: var(--md-sys-typescale-body-large-tracking);
+ line-height: var(--md-sys-typescale-body-large-line-height);
+ text-transform: var(--md-sys-typescale-body-large-text-transform);
+ text-decoration: var(--md-sys-typescale-body-large-text-decoration);
+ color: var(--md-sys-color-on-background);
+ background-color: var(--md-sys-color-background);
+ /* Las siguientes líneas Evita los cambios de apariencia al cargar estilos y
+ + custom elements, que son conocidos como Flash Of Unstyled Content (fouc). */
+ opacity: 0;
+ animation-name: fouc;
+ animation-fill-mode: forwards;
+ animation-duration: 1.5s;
 }
 
 @keyframes fouc {
-  from {
-    opacity: 0
-  }
+ to {
+  opacity: 1;
+ }
+}
 
-  to {
-    opacity: 1
-  }
+html {
+ --Font: -apple-system, BlinkMacSystemFont, roboto, sans-serif;
+ --colIntIos: white;
+ --colIntIosOnBk: #2acc2a;
+ --colIntIosOnBkFc: #1bbb1b;
+ --colIntIosOffBk: #dbdbdb;
+ --colIntIosOffBkFc: #BDBDBD;
+ /* Plain typeface */
+ --md-ref-typeface-plain: var(--Font);
+ /* Brand typeface */
+ --md-ref-typeface-brand: var(--Font);
+ --md-sys-typescale-label-large-weight-prominent:
+  var(--md-ref-typeface-weight-bold);
+ --md-box_shadow_level4:
+  0 var(--md-sys-elevation-level4) var(--md-sys-elevation-level4) var(--md-sys-color-shadow);
+ --md-box_shadow_level3:
+  0 var(--md-sys-elevation-level3) var(--md-sys-elevation-level3) var(--md-sys-color-shadow);
+ --md-box_shadow_level2:
+  0 var(--md-sys-elevation-level2) var(--md-sys-elevation-level2) var(--md-sys-color-shadow);
+ --md-box_shadow_level1:
+  0 var(--md-sys-elevation-level1) var(--md-sys-elevation-level1) var(--md-sys-color-shadow);
+ --md-box_shadow_level0: none;
+ --iconSize: 1.5rem;
+ --avatarSize: 2.5rem;
+ --imageSize: 3.5rem;
+ --videoWidth: 7.125rem;
+ --videoHeight: 4rem;
+ --scroll-headline-duracion: 2s;
+ --md-sys-state-focus-indicator-outer-offset: 0.125rem;
+ --md-sys-state-focus-indicator-thickness: 0.1875rem;
+ /* Pressed state layer opacity */
+ --state-pressed-transparency-percentage: 84%;
+ /* Focus state layer opacity */
+ --state-focus-transparency-percentage: 88%;
+ /* Hover state layer opacity */
+ --state-hover-transparency-percentage: 92%;
+}
+
+p {
+ margin: 1rem;
+}
+
+a {
+ color: var(--md-sys-color-on-background);
+}
+
+.boton-flotante {
+    position: fixed;
+    bottom: 1rem; /* Distancia desde la parte inferior */
+    right: 1rem; /* Distancia desde la parte derecha */
+    z-index: 1000; /* Asegura que el botón esté sobre otros elementos */
+}
+
+.boton-flotante .mdl-button {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra opcional para destacarlo */
 }
 
 
-.container {
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
+@media (prefers-color-scheme: light) {
+ html {
+  --md-riple-color: #00000020;
+ }
 }
 
-h2 {
-  margin-bottom: 20px;
-  color: #333;
+@media (prefers-color-scheme: dark) {
+ html {
+  --md-riple-color: #ffffff40;
+ }
 }
 
-label {
-  font-size: 18px;
-  margin-right: 10px;
+@keyframes salePorLaIzquierda {
+ to {
+  translate: -100vw 0;
+ }
 }
 
-select {
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  background-color: #f9f9f9;
-  font-size: 16px;
-  outline: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
+@keyframes entraPorLaDerecha {
+ from {
+  translate: 100vw 0;
+ }
 }
 
-select:hover {
-  background-color: #e9e9e9;
-  border-color: #888;
+@keyframes aparece {
+ from {
+  opacity: 0;
+ }
 }
 
-select:focus {
-  background-color: #e2f7e2;
-  border-color: #66bb66;
-}
-
-
-/* Estilos para pantallas grandes */
-@media (min-width: 768px) {
-  .nav-hamburguesa {
-    display: none;
-  }
-  .nav-tabs {
-    display: flex;
-  }
-}
-
-/* Estilos para pantallas pequeñas */
-@media (max-width: 767px) {
-  .nav-hamburguesa {
-    display: block;
-  }
-  .nav-tabs {
-    display: none;
-  }
+@keyframes desvanece {
+ to {
+  opacity: 0;
+ }
+ 
 }

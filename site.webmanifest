@@ -13,14 +13,14 @@
  "screenshots": [
   {
    "src": "/img/screenshot_horizontal.png",
-   "sizes": "1358x647",
+   "sizes": "1358x640",
    "type": "image/png",
    "form_factor": "wide",
    "label": "Notificaciones"
   },
   {
    "src": "/img/screenshot_vertical.png",
-   "sizes": "489x643",
+   "sizes": "502x646",
    "type": "image/png",
    "form_factor": "narrow",
    "label": "Notificaciones (2)"
@@ -57,7 +57,30 @@
    "type": "image/png",
    "purpose": "maskable"
   },
-
+  {
+   "src": "/img/maskable_icon_x384.png",
+   "sizes": "384x384",
+   "type": "image/png",
+   "purpose": "maskable"
+  },
+  {
+   "src": "/img/maskable_icon_x512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "maskable"
+  },
+  {
+   "src": "/img/maskable_icon_x1024.png",
+   "sizes": "1024x1024",
+   "type": "image/png",
+   "purpose": "maskable"
+  },
+  {
+   "src": "/img/maskable_icon_x2048.png",
+   "sizes": "2048x2048",
+   "type": "image/png",
+   "purpose": "maskable"
+  },
   {
    "src": "/img/maskable_icon_x48.png",
    "sizes": "48x48",
@@ -89,8 +112,32 @@
    "purpose": "any"
   },
   {
+   "src": "/img/maskable_icon_x384.png",
+   "sizes": "384x384",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "/img/maskable_icon_x512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "/img/maskable_icon_x1024.png",
+   "sizes": "1024x1024",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "/img/maskable_icon_x2048.png",
+   "sizes": "2048x2048",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
    "src": "/img/maskable_icon.png",
-   "sizes": "192x192",
+   "sizes": "2048x2048",
    "type": "image/png",
    "purpose": "any"
   }

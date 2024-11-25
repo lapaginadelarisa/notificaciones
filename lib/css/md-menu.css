@@ -1,5 +1,5 @@
 .md-menu {
- display: block;
+ display: none;
  z-index: 2;
  box-sizing: border-box;
  cursor: default;
@@ -9,16 +9,26 @@
  background-color: var(--md-sys-color-surface-container-low);
  box-shadow: var(--md-box_shadow_level2);
  transform: translateY(-50%) scaleY(0);
- transition-property: transform;
+ transition-timing-function:
+  cubic-bezier(var(--md-sys-motion-easing-standard-x0),
+   var(--md-sys-motion-easing-standard-y0),
+   var(--md-sys-motion-easing-standard-x1),
+   var(--md-sys-motion-easing-standard-y1));
+ transition-property: display, transform;
+ transition-behavior: allow-discrete;
  transition-duration: var(--md-sys-motion-duration-500);
 }
 
-.md-menu[hidden] {
- display: none
+.md-menu.open {
+ display: block;
+ transform: translateY(0) scaleY(1);
 }
 
-.md-menu.open {
- transform: translateY(0) scaleY(1);
+@starting-style {
+ .md-menu.open {
+  display: block;
+  transform: translateY(-50%) scaleY(0);
+ }
 }
 
 /* container */

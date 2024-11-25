@@ -11,19 +11,9 @@ export class NavBar extends HTMLElement {
     Inicio
    </a>
 
-   <a ${resaltaSiEstasEn(["/navTabFixed.html"])} href="navTabFixed.html">
-    <span class="material-symbols-outlined">tabs</span>
-    Pestañas
-   </a>
-
-   <a ${resaltaSiEstasEn(["/navbar.html"])} href="navbar.html">
-    <span class="material-symbols-outlined">bottom_navigation</span>
-    Barra
-   </a>
-
-   <a ${resaltaSiEstasEn(["/formulario.html"])} href="formulario.html">
-    <span class="material-symbols-outlined">newspaper</span>
-    Forma
+   <a ${resaltaSiEstasEn(["/formulario.html"])} href="ayuda.html">
+    <span class="material-symbols-outlined">help</span>
+    Ayuda
    </a>`
 
  }

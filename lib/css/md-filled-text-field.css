@@ -1,6 +1,5 @@
 .md-filled-text-field {
  position: relative;
- margin: 1rem;
  overflow: hidden;
  display: flex;
  flex-direction: column;
@@ -59,8 +58,10 @@
  text-decoration: var(--md-sys-typescale-body-large-text-decoration);
 }
 
+.md-filled-text-field :not(:placeholder-shown)+span,
 .md-filled-text-field :not(:placeholder-shown)+label,
 .md-filled-text-field .populated+span,
+.md-filled-text-field .populated+label,
 .md-filled-text-field:focus-within span,
 .md-filled-text-field:focus-within label,
 .md-filled-text-field.float span,
